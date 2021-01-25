@@ -1,0 +1,271 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "Feedback" | translate }}</h6>
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="far fa-file text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-xl-12">
+			<div class=" card">
+				<div class=" card-header">
+				  <h3 class=" mb-0">{{ "FeedbackLists" | translate }}</h3>
+				</div>
+				<div class="dataTables_wrapper py-4">		  
+					<ngx-datatable
+					  class="bootstrap selection-cell"
+					  [columnMode]="'force'"
+					  [headerHeight]="50"
+					  [footerHeight]="50"
+					  [rowHeight]="'auto'"
+					  [limit]="entries != -1 ? entries : undefined"
+					  [rows]="temp"
+					  
+					>
+						<!-- <ngx-datatable-column name="No">
+						  <ng-template
+						  let-rowIndex="rowIndex"
+						  let-row="row"
+						  ngx-datatable-cell-template
+						  >
+						  <strong>{{ rowIndex + 1 }}</strong>
+						  </ng-template>
+						</ngx-datatable-column> -->
+						<ngx-datatable-column name="No.">
+							<ng-template
+							let-rowIndex="rowIndex"
+							let-row="row"
+							ngx-datatable-cell-template
+							>
+							<strong>{{ rowIndex + 1 }}</strong>
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="List of Service" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.service}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Name of Officer" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.nameofficer}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Date Registered" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.date}}
+							</ng-template>
+						</ngx-datatable-column>
+						<!-- <ngx-datatable-column name="ID"></ngx-datatable-column>
+						<ngx-datatable-column name="Date"></ngx-datatable-column> -->
+				  
+						<ngx-datatable-column name="Action">
+							<ng-template let-row="row" ngx-datatable-cell-template>
+								<button class=" btn btn-icon btn-primary btn-sm" type="button" title="Edit" (click)="openModal(editData)">
+									<span class=" btn-inner--icon"> <i class=" far fa-edit"> </i> </span>
+								</button>
+								<!-- <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+									<span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+								</button>
+								<button class=" btn btn-icon btn-default btn-sm" type="button" title="Print">
+									<span class=" btn-inner--icon"> <i class=" fas fa-print"> </i> </span>
+								</button> -->
+							</ng-template>
+						</ngx-datatable-column>
+					</ngx-datatable>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #editData>
+    <div class="modal-header bg-default">
+        <h6 class="modal-title text-white my-auto" id="modal-title-default">
+            {{ "FeedbackForm" | translate }}
+        </h6>
+
+        <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            <span aria-hidden="true" class="text-white my-auto"> × </span>
+        </button>
+	</div>
+	
+
+
+    <div class="modal-body">
+		<div class="col-12">
+			<img class="try-img" 
+			src="./assets/img/default/stars-1.png"
+			style="height: 70%; width: 70%;"
+			>
+			<!-- <rating [(ngModel)]="value" 
+			[max]="max" 
+			[readonly]="false" 
+			[titles]="['one','two','three','four']">
+        	</rating> -->
+		</div>
+		
+		
+
+        <form [formGroup]="registerForm">
+			
+            
+			<div class="form-group">
+				<label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+				{{ "FeedbackFillForm" | translate }}
+                </label>
+
+                <textarea
+                  class=" form-control"
+                  id="exampleFormControlTextarea3"
+				  rows="3"
+				  placeholder="Type here..."
+                ></textarea>
+			</div>
+			<div class="form-group">
+				<label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+				{{ "Sex" | translate }}
+                </label>
+
+                <select class=" form-control" id="exampleFormControlSelect3">
+					<option> {{ "Male" | translate }} </option>
+  
+					<option> {{ "Female" | translate }} </option>
+				  </select>
+			</div>
+			<div class="form-group">
+				<label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+				{{ "Age" | translate }}
+                </label>
+
+                <select class=" form-control" id="exampleFormControlSelect3">
+					<option> {{ "below" | translate }} </option>
+  
+					<option> 18 - 24 </option>
+  
+					<option> 25 - 35 </option>
+  
+					<option> 36-49 </option>
+  
+					<option> {{ "above" | translate }} </option>
+				  </select>
+			</div>
+			<div class="form-group">
+				<label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+				{{ "KnowThisService" | translate }}
+                </label>
+
+                <select class=" form-control" id="exampleFormControlSelect3">
+					<option> 1 </option>
+  
+					<option> 2 </option>
+  
+					<option> 3 </option>
+  
+					<option> 4 </option>
+  
+					<option> 5 </option>
+				  </select>
+			</div>
+		</form>
+		
+		<div class="card">
+			<div class="card-body">
+				<label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+				{{ "Share" | translate }}
+            	</label>
+				<div class="row">
+			
+					<button class=" btn btn-facebook btn-icon-only" type="button" title="Facebook">
+						<span class=" btn-inner--icon">
+						  <i class=" fab fa-facebook"> </i>
+						</span>
+					  </button>
+			
+					  <button class=" btn btn-twitter btn-icon-only" type="button" title="Twitter">
+						<span class=" btn-inner--icon">
+						  <i class=" fab fa-twitter"> </i>
+						</span>
+					  </button>
+			
+					  <button class=" btn btn-slack btn-icon-only" type="button" title="Whatsapp">
+						<span class=" btn-inner--icon">
+						  <i class=" fab fa-whatsapp"> </i>
+						</span>
+					  </button>
+			
+					  <button class=" btn btn-instagram btn-icon-only" type="button" title="Instagram">
+						<span class=" btn-inner--icon">
+						  <i class=" fab fa-instagram"> </i>
+						</span>
+					  </button>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <div class="modal-footer">
+        <button 
+            class="btn btn-success"
+            type="button"
+            (click)="confirm()"
+            [disabled]="!registerForm.valid"
+        >
+            {{ "Save" | translate }}
+        </button>
+
+        <button
+            class="btn btn-outline-danger ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            {{ "Close" | translate }}
+        </button>
+    </div>
+</ng-template>
+
+<footer>
+	<livechat-widget
+	  #liveChatWidget
+	  licenseId="11082047"
+	  (onChatLoaded)="onChatLoaded($event)"
+	  (onChatWindowOpened)="onChatWindowOpened()"
+	  (onChatWindowMinimized)="onChatWindowMinimized()"
+	  [visitor]=""
+	  [params]=""
+	></livechat-widget>
+  </footer>

@@ -1,0 +1,221 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "TransportationBooking" | translate }}</h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-map-marker-alt text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+			  <div class="card-header bg-secondary">
+				  <h6 class="h2 text-dark d-inline-block mb-0">{{ "PersonalPlanning" | translate }}</h6> 
+			  </div>
+			  <div class="card-body">
+				  <div class="row">
+					<div class=" col-12 col-md-6">
+					  <div class=" form-group">
+						<label class=" form-control-label" for="exampleDatepicker">
+							{{ "DateFrom" | translate }}
+						</label>
+						<input
+							type="text"
+							placeholder="Date From"
+							class="form-control"
+							bsDatepicker
+							
+							[bsConfig]="{
+							  isAnimated: true,
+							  containerClass: 'theme-red'
+							}"
+						/>
+					  </div>
+					</div>
+					<div class=" col-12 col-md-6">
+						<div class=" form-group">
+						  	<label class=" form-control-label" for="exampleDatepicker">
+								{{ "DateTo" | translate }}
+							</label>
+							<input
+							  type="text"
+							  placeholder="Date To"
+							  class="form-control"
+							  bsDatepicker
+							  
+							  [bsConfig]="{
+								isAnimated: true,
+								containerClass: 'theme-red'
+							  }"
+							/>
+						</div>
+					</div>
+					<div class=" col-12 col-md-6">
+						<div class=" form-group">
+						  <label class=" form-control-label" for="example4cols3Input">
+							{{ "LocationPickup" | translate }}
+						  </label>
+			  
+						  	<input
+								class=" form-control"
+								id="example-text-input"
+								type="text"
+								placeholder="Type here..."
+							/>
+						</div>
+					</div>
+					<div class=" col-12 col-md-6">
+						<div class=" form-group">
+						  <label class=" form-control-label" for="example4cols3Input">
+							{{ "LocationArrived" | translate }}
+						  </label>
+			  
+						  	<input
+								class=" form-control"
+								id="example-text-input"
+								type="text"
+								placeholder="Type here..."
+							/>
+						</div>
+					</div>
+					<div class=" col-12 text-right">
+						<button class=" btn btn-default" type="button">{{ "Search" | translate }}</button>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "TransportationBooking" | translate }}</h6>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-xl-3 col-md-6">
+							<img
+							alt="Image placeholder"
+							class=" card-img-top"
+							src="assets/img/theme/img-1-1000x900.jpg"
+							/>
+							<a class=" btn btn-default text-white" style="display: block;" (click)="openModal(viewData)">
+								{{ "Car" | translate }} A
+							  </a>
+				
+						</div>
+						<div class="col-xl-3 col-md-6">
+							<img
+							alt="Image placeholder"
+							class=" card-img-top"
+							src="assets/img/theme/img-1-1000x900.jpg"
+							/>
+							<a class=" btn btn-default text-white" style="display: block;" (click)="openModal(viewData)">
+								{{ "Car" | translate }} B
+							  </a>
+				
+						</div>
+						<div class="col-xl-3 col-md-6">
+							<img
+							alt="Image placeholder"
+							class=" card-img-top"
+							src="assets/img/theme/img-1-1000x900.jpg"
+							/>
+							<a class=" btn btn-default text-white" style="display: block;" (click)="openModal(viewData)">
+								{{ "Car" | translate }} C
+							  </a>
+				
+						</div>
+						<div class="col-xl-3 col-md-6">
+							<img
+							alt="Image placeholder"
+							class=" card-img-top"
+							src="assets/img/theme/img-1-1000x900.jpg"
+							/>
+							<a class=" btn btn-default text-white" style="display: block;" (click)="openModal(viewData)">
+								{{ "Car" | translate }} D
+							  </a>
+				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #viewData>
+	<div class=" modal-header">
+	  <h6 class=" modal-title" id="modal-title-default">
+		{{ "CarTypeDetails" | translate }}
+	  </h6>
+
+	  <button
+		aria-label="Close"
+		class=" close"
+		data-dismiss="modal"
+		type="button"
+		(click)="defaultModal.hide()"
+	  >
+		<span aria-hidden="true"> × </span>
+	  </button>
+	</div>
+
+	<div class=" modal-body">
+	  <p>
+		Far far away, behind the word mountains, far from the
+		countries Vokalia and Consonantia, there live the blind
+		texts. Separated they live in Bookmarksgrove right at the
+		coast of the Semantics, a large language ocean.
+	  </p>
+
+	  <p>
+		A small river named Duden flows by their place and supplies
+		it with the necessary regelialia. It is a paradisematic
+		country, in which roasted parts of sentences fly into your
+		mouth.
+	  </p>
+	</div>
+
+	<div class=" modal-footer">
+	  <button 
+	  class=" btn btn-default" 
+	  type="button" 
+	  class="btn btn-success"
+	  (click)="goPage()">
+		{{ "Pay" | translate }}
+	  </button>
+
+	  <button
+		class=" btn btn-link ml-auto"
+		data-dismiss="modal"
+		type="button"
+		(click)="defaultModal.hide()"
+	  >
+		{{ "Close" | translate }}
+	  </button>
+	</div>
+  </ng-template>
+
+  <footer>
+	<livechat-widget
+	  #liveChatWidget
+	  licenseId="11082047"
+	  (onChatLoaded)="onChatLoaded($event)"
+	  (onChatWindowOpened)="onChatWindowOpened()"
+	  (onChatWindowMinimized)="onChatWindowMinimized()"
+	  [visitor]=""
+	  [params]=""
+	></livechat-widget>
+  </footer>

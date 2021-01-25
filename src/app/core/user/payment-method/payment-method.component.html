@@ -1,0 +1,287 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "Payment" | translate }}</h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-money-bill text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="h2 text-dark d-inline-block mb-0">{{ "TotalAmounttoPay" | translate }}</h6> 
+                </div>
+                <div class="card-body">
+                    <div class=" col-12">
+                        <div class=" form-group">
+              
+                          <input
+                              class=" form-control text-right"
+                              id="example-text-input"
+                              type="text"
+                              placeholder="RM100.00"
+                          />
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class=" card bg-gradient-primary">
+                <div class=" card-body">
+                  <div class=" row justify-content-between align-items-center">
+                    <div class=" col">
+                        <h6 class="h2 text-white d-inline-block mb-0">{{ "CreditCard" | translate }}</h6>
+                      <img
+                        alt="Image placeholder"
+                        src="assets/img/icons/cards/mastercard.png"
+                      />
+                    </div>
+        
+                    <div class=" col-auto">
+                      <div class=" d-flex align-items-center">
+                        <small class=" text-white font-weight-bold mr-3">
+                          {{ "MakeDefault" | translate }}
+                        </small>
+        
+                        <div>
+                          <label class=" custom-toggle custom-toggle-white">
+                            <input checked="" type="checkbox" />
+        
+                            <span
+                              class=" custom-toggle-slider rounded-circle"
+                              data-label-off="No"
+                              data-label-on="Yes"
+                            >
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class=" mt-4">
+                    <form class=" form-primary" role="form">
+                      <div class=" form-group">
+                        <div class=" input-group input-group-alternative mb-3">
+                          <div class=" input-group-prepend">
+                            <span class=" input-group-text">
+                              <i class=" ni ni-single-02"> </i>
+                            </span>
+                          </div>
+        
+                          <input
+                            class=" form-control"
+                            placeholder="Name on card"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+        
+                      <div class=" form-group">
+                        <div class=" input-group input-group-alternative mb-3">
+                          <div class=" input-group-prepend">
+                            <span class=" input-group-text">
+                              <i class=" ni ni-credit-card"> </i>
+                            </span>
+                          </div>
+        
+                          <input
+                            class=" form-control"
+                            placeholder="Card number"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+        
+                      <div class=" row">
+                        <div class=" col-6">
+                          <div class=" form-group">
+                            <div class=" input-group input-group-alternative mb-3">
+                              <div class=" input-group-prepend">
+                                <span class=" input-group-text">
+                                  <i class=" ni ni-calendar-grid-58"> </i>
+                                </span>
+                              </div>
+        
+                              <input
+                                class=" form-control"
+                                placeholder="MM/YY"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class=" col-6">
+                          <div class=" form-group">
+                            <div class=" input-group input-group-alternative">
+                              <div class=" input-group-prepend">
+                                <span class=" input-group-text">
+                                  <i class=" ni ni-lock-circle-open"> </i>
+                                </span>
+                              </div>
+        
+                              <input
+                                class=" form-control"
+                                placeholder="CCV"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <button class=" btn btn-block btn-info" type="button">
+                        {{ "Pay" | translate }}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-12">
+            <div class=" card bg-gradient-primary">
+                <div class=" card-body">
+                  <div class=" row justify-content-between align-items-center">
+                    <div class=" col">
+                        <h6 class="h2 text-white d-inline-block mb-0">{{ "OnlineBanking" | translate }}</h6>
+                      <!-- <img
+                        alt="Image placeholder"
+                        src="assets/img/icons/cards/mastercard.png"
+                      /> -->
+                    </div>
+        
+                    <div class=" col-auto">
+                      <div class=" d-flex align-items-center">
+                        <small class=" text-white font-weight-bold mr-3">
+                          {{ "MakeDefault" | translate }}
+                        </small>
+        
+                        <div>
+                          <label class=" custom-toggle custom-toggle-white">
+                            <input checked="" type="checkbox" />
+        
+                            <span
+                              class=" custom-toggle-slider rounded-circle"
+                              data-label-off="No"
+                              data-label-on="Yes"
+                            >
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class=" mt-4">
+                    <form class=" form-primary" role="form">
+                      <div class=" form-group">
+                        <div class=" input-group input-group-alternative mb-3">
+                          <div class=" input-group-prepend">
+                            <span class=" input-group-text">
+                              <i class=" ni ni-single-02"> </i>
+                            </span>
+                          </div>
+        
+                          <input
+                            class=" form-control"
+                            placeholder="Name on card"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+        
+                      <div class=" form-group">
+                        <div class=" input-group input-group-alternative mb-3">
+                          <div class=" input-group-prepend">
+                            <span class=" input-group-text">
+                              <i class=" ni ni-credit-card"> </i>
+                            </span>
+                          </div>
+        
+                          <input
+                            class=" form-control"
+                            placeholder="Card number"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+        
+                      <div class=" row">
+                        <div class=" col-6">
+                          <div class=" form-group">
+                            <div class=" input-group input-group-alternative mb-3">
+                              <div class=" input-group-prepend">
+                                <span class=" input-group-text">
+                                  <i class=" ni ni-calendar-grid-58"> </i>
+                                </span>
+                              </div>
+        
+                              <input
+                                class=" form-control"
+                                placeholder="MM/YY"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class=" col-6">
+                          <div class=" form-group">
+                            <div class=" input-group input-group-alternative">
+                              <div class=" input-group-prepend">
+                                <span class=" input-group-text">
+                                  <i class=" ni ni-lock-circle-open"> </i>
+                                </span>
+                              </div>
+        
+                              <input
+                                class=" form-control"
+                                placeholder="CCV"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <button class=" btn btn-block btn-info" type="button">
+                        {{ "Pay" | translate }}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+	<livechat-widget
+	  #liveChatWidget
+	  licenseId="11082047"
+	  (onChatLoaded)="onChatLoaded($event)"
+	  (onChatWindowOpened)="onChatWindowOpened()"
+	  (onChatWindowMinimized)="onChatWindowMinimized()"
+	  [visitor]=""
+	  [params]=""
+	></livechat-widget>
+  </footer>

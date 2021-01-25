@@ -1,0 +1,425 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "EnrollmentMyJourney" | translate }}</h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-route text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+                </div>
+			</div>
+
+			<div class="row">				
+				<div class="col-xl-4 col-md-6">
+					<div class="card card-stats">
+						<div class="card-body">
+							<div class="row">
+								<div class="col">
+									<h5 class="card-title text-uppercase text-muted mb-0">
+										{{ "TotalTraffic" | translate }}
+									</h5>
+
+									<span class="h2 font-weight-bold mb-0"> 350,897 </span>
+								</div>
+
+								<div class="col-auto">
+									<div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+										<i class="ni ni-active-40"> </i>
+									</div>
+								</div>
+							</div>
+
+							<p class="mt-3 mb-0 text-sm">
+								<span class="text-success mr-2">
+									<i class="fa fa-arrow-up"> </i> 3.48%
+								</span>
+
+								<span class="text-nowrap"> {{ "SinceLastMonth" | translate }} </span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-4 col-md-6">
+					<div class="card card-stats">
+						<div class="card-body">
+							<div class="row">
+								<div class="col">
+									<h5 class="card-title text-uppercase text-muted mb-0">
+										{{ "NewUsers" | translate }}
+									</h5>
+
+									<span class="h2 font-weight-bold mb-0"> 2,356 </span>
+								</div>
+
+								<div class="col-auto">
+									<div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+										<i class="ni ni-chart-pie-35"> </i>
+									</div>
+								</div>
+							</div>
+
+							<p class="mt-3 mb-0 text-sm">
+								<span class="text-success mr-2">
+									<i class="fa fa-arrow-up"> </i> 3.48%
+								</span>
+
+								<span class="text-nowrap"> {{ "SinceLastMonth" | translate }} </span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+			  <div class="card-header bg-secondary">
+				  <h6 class="h2 text-dark d-inline-block mb-0">{{ "PersonalPlanning" | translate }}</h6> 
+			  </div>
+			  <div class="card-body">
+				  <div class="row">
+					<div class=" col-12 col-md-6">
+					  <div class=" form-group">
+						<label class=" form-control-label" for="example4cols3Input">
+						  {{ "YourLocation" | translate }}
+						</label>
+			
+						<select class=" form-control" id="exampleFormControlSelect1">
+						  <option> Johor </option>
+						  <option> Kedah </option>
+						  <option> Selangor </option>
+						  <option> Penang </option>
+						  <option> Sarawak </option>
+						  <option> Sabah </option>
+						  <option> Pahang </option>
+						  <option> Kelantan </option>
+						</select>
+					  </div>
+					</div>
+					<div class=" col-12 col-md-6">
+						<div class=" form-group">
+						  <label class=" form-control-label" for="example4cols3Input">
+							{{ "Destination" | translate }}
+						  </label>
+			  
+						  <select class=" form-control" id="exampleFormControlSelect1">
+							<option> Johor </option>
+							<option> Kedah </option>
+							<option> Selangor </option>
+							<option> Penang </option>
+							<option> Sarawak </option>
+							<option> Sabah </option>
+							<option> Pahang </option>
+							<option> Kelantan </option>
+						  </select>
+						</div>
+					  </div>
+					<div class=" col-12 col-md-6">
+					  <div class=" form-group">
+						<label class=" form-control-label" for="exampleDatepicker">
+							{{ "DateFrom" | translate }}
+						</label>
+						<input
+							type="text"
+							placeholder="Date From"
+							class="form-control"
+							bsDatepicker
+							
+							[bsConfig]="{
+							  isAnimated: true,
+							  containerClass: 'theme-red'
+							}"
+						/>
+					  </div>
+					</div>
+					<div class=" col-12 col-md-6">
+						<div class=" form-group">
+						  	<label class=" form-control-label" for="exampleDatepicker">
+							{{ "DateTo" | translate }}
+							</label>
+							<input
+							  type="text"
+							  placeholder="Date To"
+							  class="form-control"
+							  bsDatepicker
+							  
+							  [bsConfig]="{
+								isAnimated: true,
+								containerClass: 'theme-red'
+							  }"
+							/>
+						</div>
+					</div>
+					<div class=" col-12 col-md-6">
+						<div class=" form-group">
+						  <label class=" form-control-label" for="example4cols3Input">
+							{{ "AddPitstop" | translate }}
+						  </label>
+			  
+						  <select class=" form-control" id="exampleFormControlSelect1">
+							<option> Johor </option>
+							<option> Kedah </option>
+							<option> Selangor </option>
+							<option> Penang </option>
+							<option> Sarawak </option>
+							<option> Sabah </option>
+							<option> Pahang </option>
+							<option> Kelantan </option>
+						  </select>
+						</div>
+					</div>
+					<div class=" col-12 col-md-6 text-right">
+						<button class=" btn btn-default" type="button">{{ "Search" | translate }}</button>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-xl-8">
+							<div style="height: 400px;"
+							leaflet
+							[leafletOptions]="options"
+							[leafletLayers]="layers">
+							   </div>
+						</div>
+						<div class="col-xl-4">
+							<div class=" card">
+								<div class=" card-header"><h5 class=" h3 mb-0">{{ "PinPlace" | translate }}</h5></div>
+						
+								<div class=" card-body">
+								  <ul class=" list-group list-group-flush list my--3">
+									<li class=" list-group-item px-0">
+									  <div class=" row align-items-center">
+										<div class=" col-auto">
+										  <a class=" avatar rounded-circle" href="javascript:void(0)">
+											<img
+											  alt="Image placeholder"
+											  src="assets/img/default/pinpoint-red.png"
+											  style="width: 50%"
+											/>
+										  </a>
+										</div>
+						
+										<div class=" col">
+											<div class=" col ml--2">
+												<h4 class=" mb-0">
+												  <a href="javascript:void(0)"> {{ "Place" | translate }} 1 </a>
+												</h4>
+							  
+												<span class=" text-warning"> ● </span>
+							  
+												<small> {{ "MediumCongestion" | translate }} </small>
+											  </div>
+										</div>
+									  </div>
+									</li>
+						
+									<li class=" list-group-item px-0">
+									  <div class=" row align-items-center">
+										<div class=" col-auto">
+										  <a class=" avatar rounded-circle" href="javascript:void(0)">
+											<img
+											  alt="Image placeholder"
+											  src="assets/img/default/pinpoint-blue.png"
+											  style="width: 50%"
+											/>
+										  </a>
+										</div>
+						
+										<div class=" col">
+											<div class=" col ml--2">
+												<h4 class=" mb-0">
+												  <a href="javascript:void(0)"> {{ "Place" | translate }} 2 </a>
+												</h4>
+							  
+												<span class=" text-danger"> ● </span>
+							  
+												<small> {{ "HeavyCongestion" | translate }} </small>
+											  </div>
+										</div>
+									  </div>
+									</li>
+						
+									<li class=" list-group-item px-0">
+									  <div class=" row align-items-center">
+										<div class=" col-auto">
+										  <a class=" avatar rounded-circle" href="javascript:void(0)">
+											<img
+											  alt="Image placeholder"
+											  src="assets/img/default/pinpoint-yellow.png"
+											  style="width: 50%"
+											/>
+										  </a>
+										</div>
+						
+										<div class=" col">
+											<div class=" col ml--2">
+												<h4 class=" mb-0">
+												  <a href="javascript:void(0)"> {{ "Place" | translate }} 3 </a>
+												</h4>
+							  
+												<span class=" text-success"> ● </span>
+							  
+												<small> {{ "LightCongestion" | translate }} </small>
+											  </div>
+										</div>
+									  </div>
+									</li>
+								  </ul>
+								</div>
+							  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=" card">
+				<div class=" card-header">
+				  <h3 class=" mb-0">{{ "DataList" | translate }}</h3>
+		
+				  <!-- <p class=" text-sm mb-0">
+					This is an exmaple of datatable using the well known ngx-datatable
+					plugin. This is a minimal setup in order to get started fast.
+				  </p> -->
+				</div>
+				<div class="dataTables_wrapper py-4">
+					<div class="row">
+					  <div class="col-sm-12 col-md-6">
+						<div class="dataTables_length" id="datatable_length">
+						  <label>
+							{{ "Show" | translate }}
+							<select
+							  name="datatable_length"
+							  aria-controls="datatable"
+							  class="form-control form-control-sm"
+							  (change)="entriesChange($event)"
+							>
+							  <option value="10" [selected]="entries == 10">10</option>
+							  <option value="25" [selected]="entries == 25">25</option>
+							  <option value="50" [selected]="entries == 50">50</option>
+							  <option value="-1" [selected]="entries == -1">All</option>
+							</select>
+							{{ "Entries" | translate }}
+						  </label>
+						</div>
+					  </div>
+					  <div class="col-sm-12 col-md-6">
+						<div id="datatable_filter" class="dataTables_filter">
+						  <label>
+							<input
+							  type="search"
+							  class="form-control form-control-sm"
+							  placeholder="Search records"
+							  aria-controls="datatable"
+							  (keyup)="filterTable($event)"
+							/>
+						  </label>
+						</div>
+					  </div>
+					</div>
+		  
+					<ngx-datatable
+					  class="bootstrap selection-cell"
+					  [columnMode]="'force'"
+					  [headerHeight]="50"
+					  [footerHeight]="50"
+					  [rowHeight]="'auto'"
+					  [limit]="entries != -1 ? entries : undefined"
+					  [rows]="temp"
+					  (activate)="onActivate($event)"
+					>
+						<!-- <ngx-datatable-column name="No">
+						  <ng-template
+						  let-rowIndex="rowIndex"
+						  let-row="row"
+						  ngx-datatable-cell-template
+						  >
+						  <strong>{{ rowIndex + 1 }}</strong>
+						  </ng-template>
+						</ngx-datatable-column> -->
+						<ngx-datatable-column name="Your Location" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.yourLocation}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Destination" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.destination}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Time Leave" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.timeLeave}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Time Arrived" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.timeArrived}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Recommended Time Leave" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.recommendedTimeLeave}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Date From" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.dateFrom}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Date To" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.dateTo}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Pitstop" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.pitsop}}
+							</ng-template>
+						</ngx-datatable-column>
+						<!-- <ngx-datatable-column name="ID"></ngx-datatable-column>
+						<ngx-datatable-column name="Date"></ngx-datatable-column> -->
+				  
+						<!-- <ngx-datatable-column name="Action">
+							<ng-template let-row="row" ngx-datatable-cell-template>
+								<button class=" btn btn-icon btn-success btn-sm" type="button" title="View">
+									<span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+								</button>
+								<button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+									<span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+								</button>
+								<button class=" btn btn-icon btn-default btn-sm" type="button" title="Print">
+									<span class=" btn-inner--icon"> <i class=" fas fa-print"> </i> </span>
+								</button>
+							</ng-template>
+						</ngx-datatable-column> -->
+					</ngx-datatable>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<livechat-widget
+	  #liveChatWidget
+	  licenseId="11082047"
+	  (onChatLoaded)="onChatLoaded($event)"
+	  (onChatWindowOpened)="onChatWindowOpened()"
+	  (onChatWindowMinimized)="onChatWindowMinimized()"
+	  [visitor]=""
+	  [params]=""
+	></livechat-widget>
+  </footer>

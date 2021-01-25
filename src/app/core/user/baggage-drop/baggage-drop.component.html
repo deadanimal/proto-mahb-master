@@ -1,0 +1,307 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "BaggageDrop" | translate }}</h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-luggage-cart text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+			  <div class="card-header bg-secondary">
+				  <h6 class="h2 text-dark d-inline-block mb-0">{{ "BaggageTracking" | translate }}</h6> 
+			  </div>
+			  <div class="card-body">
+				  <div class="row">
+					<div class=" col-6">
+					  <div class=" form-group">
+						<label class=" form-control-label" for="example4cols3Input">
+						  {{ "CheckinBagLocation" | translate }}
+						</label>
+			
+						<input
+							class=" form-control"
+							id="example-text-input"
+							type="text"
+							placeholder="Type here..."
+						/>
+					  </div>
+					</div>
+					<div class=" col-6">
+					  <div class=" form-group">
+						<label class=" form-control-label" for="example4cols3Input">
+						  {{ "BagDescription" | translate }}
+						</label>
+			
+						<input
+							class=" form-control"
+							id="example-text-input"
+							type="text"
+							placeholder="Type here..."
+						/>
+					  </div>
+					</div>
+					<div class=" col-6">
+						<div class=" form-group">
+							<label class=" form-control-label" for="example4cols3Input">
+								{{ "BagType" | translate }}
+							</label>
+				
+							<input
+							class=" form-control"
+							id="example-text-input"
+							type="text"
+							placeholder="Type here..."
+							/>
+						</div>
+					</div>
+					<div class=" col-6">
+						<div class=" form-group">
+							<label class=" form-control-label" for="example4cols3Input">
+								{{ "BagColour" | translate }}
+							</label>
+				
+							<input
+								class=" form-control"
+								id="example-color-input"
+								type="color"
+								placeholder="#5e72e4"
+							/>
+						</div>
+					</div>
+					<div class="col-12 text-right">
+						<button class="btn btn-default" type="button" (click)="openModal(searchData)">{{ "Search" | translate }}</button>
+					</div>
+				  </div>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #searchData>
+	<div class="modal-header bg-default">
+        <h6 class="modal-title text-white my-auto" id="modal-title-default">
+            {{ "YourBaggageDetails" | translate }}
+        </h6>
+
+        <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            <span aria-hidden="true" class="text-white my-auto"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+
+        <div
+            class=" timeline timeline-one-side"
+            data-timeline-axis-style="dashed"
+            data-timeline-content="axis"
+          >
+            <div class=" timeline-block">
+              <span class=" timeline-step badge-success">
+                <i class=" ni ni-bell-55"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> 10:30 AM </small>
+
+                <h5 class=" mt-3 mb-0">New message</h5>
+
+                <p class=" text-sm mt-1 mb-0">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
+                  sociis natoque penatibus et magnis dis parturient montes,
+                  nascetur ridiculus mus.
+                </p>
+
+                <div class=" mt-3">
+                  <span class=" badge badge-pill badge-success mr-1">
+                    design
+                  </span>
+
+                  <span class=" badge badge-pill badge-success mr-1">
+                    system
+                  </span>
+
+                  <span class=" badge badge-pill badge-success">
+                    creative
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class=" timeline-block">
+              <span class=" timeline-step badge-danger">
+                <i class=" ni ni-html5"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> 10:30 AM </small>
+
+                <h5 class=" mt-3 mb-0">Product issue</h5>
+
+                <p class=" text-sm mt-1 mb-0">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
+                  sociis natoque penatibus et magnis dis parturient montes,
+                  nascetur ridiculus mus.
+                </p>
+
+                <div class=" mt-3">
+                  <span class=" badge badge-pill badge-danger mr-1">
+                    design
+                  </span>
+
+                  <span class=" badge badge-pill badge-danger mr-1">
+                    system
+                  </span>
+
+                  <span class=" badge badge-pill badge-danger"> creative </span>
+                </div>
+              </div>
+            </div>
+
+            <div class=" timeline-block">
+              <span class=" timeline-step badge-info">
+                <i class=" ni ni-like-2"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> 10:30 AM </small>
+
+                <h5 class=" mt-3 mb-0">New likes</h5>
+
+                <p class=" text-sm mt-1 mb-0">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
+                  sociis natoque penatibus et magnis dis parturient montes,
+                  nascetur ridiculus mus.
+                </p>
+
+                <div class=" mt-3">
+                  <span class=" badge badge-pill badge-info mr-1">
+                    design
+                  </span>
+
+                  <span class=" badge badge-pill badge-info mr-1">
+                    system
+                  </span>
+
+                  <span class=" badge badge-pill badge-info"> creative </span>
+                </div>
+              </div>
+            </div>
+
+            <div class=" timeline-block">
+              <span class=" timeline-step badge-success">
+                <i class=" ni ni-bell-55"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> 10:30 AM </small>
+
+                <h5 class=" mt-3 mb-0">New message</h5>
+
+                <p class=" text-sm mt-1 mb-0">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
+                  sociis natoque penatibus et magnis dis parturient montes,
+                  nascetur ridiculus mus.
+                </p>
+
+                <div class=" mt-3">
+                  <span class=" badge badge-pill badge-success mr-1">
+                    design
+                  </span>
+
+                  <span class=" badge badge-pill badge-success mr-1">
+                    system
+                  </span>
+
+                  <span class=" badge badge-pill badge-success">
+                    creative
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class=" timeline-block">
+              <span class=" timeline-step badge-danger">
+                <i class=" ni ni-html5"> </i>
+              </span>
+
+              <div class=" timeline-content">
+                <small class=" text-muted font-weight-bold"> 10:30 AM </small>
+
+                <h5 class=" mt-3 mb-0">Product issue</h5>
+
+                <p class=" text-sm mt-1 mb-0">
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cum
+                  sociis natoque penatibus et magnis dis parturient montes,
+                  nascetur ridiculus mus.
+                </p>
+
+                <div class=" mt-3">
+                  <span class=" badge badge-pill badge-danger mr-1">
+                    design
+                  </span>
+
+                  <span class=" badge badge-pill badge-danger mr-1">
+                    system
+                  </span>
+
+                  <span class=" badge badge-pill badge-danger"> creative </span>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="modal-footer">
+        <!-- <button 
+            class="btn btn-success"
+            type="button"
+            (click)="confirm()"
+            [disabled]="!registerForm.valid"
+        >
+            Save
+        </button> -->
+
+        <button
+            class="btn btn-outline-danger ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+        {{ "Close" | translate }}
+        </button>
+    </div>
+</ng-template>
+
+<footer>
+  <livechat-widget
+    #liveChatWidget
+    licenseId="11082047"
+    (onChatLoaded)="onChatLoaded($event)"
+    (onChatWindowOpened)="onChatWindowOpened()"
+    (onChatWindowMinimized)="onChatWindowMinimized()"
+    [visitor]=""
+    [params]=""
+  ></livechat-widget>
+</footer>

@@ -1,0 +1,219 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0">{{ "RealTimeQueueInfo" | translate }}</h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-info text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-xl-12">
+			<div class="card">
+				<div class=" card-header"><h5 class=" h3 mb-0">{{ "QueueInfo" | translate }}</h5></div>
+				<div class="row align-items-center">
+					
+					<div class="card-body">
+						<div class="chart">
+							<div class="amchart" id="chartgantt1queueinfo"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xl-12">
+			<div class=" card">
+				<div class=" card-header">
+				  <h3 class=" mb-0">{{ "QueueInfo" | translate }}</h3>
+				</div>
+				<div class="dataTables_wrapper py-4">		  
+					<ngx-datatable
+					  class="bootstrap selection-cell"
+					  [columnMode]="'force'"
+					  [headerHeight]="50"
+					  [footerHeight]="50"
+					  [rowHeight]="'auto'"
+					  [limit]="entries != -1 ? entries : undefined"
+					  [rows]="temp"
+					  
+					>
+						<!-- <ngx-datatable-column name="No">
+						  <ng-template
+						  let-rowIndex="rowIndex"
+						  let-row="row"
+						  ngx-datatable-cell-template
+						  >
+						  <strong>{{ rowIndex + 1 }}</strong>
+						  </ng-template>
+						</ngx-datatable-column> -->
+						<ngx-datatable-column name="Platform" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.platform}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Gate" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.gate}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Flight No">
+						  <ng-template
+						  let-rowIndex="rowIndex"
+						  let-row="row"
+						  ngx-datatable-cell-template
+						  >
+						  <strong>{{ rowIndex + 27 }}</strong>
+						  </ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Name" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.name}}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column name="Date" >
+							<ng-template let-row="row" ngx-datatable-cell-template>
+							{{row.date}}
+							</ng-template>
+						</ngx-datatable-column>
+						<!-- <ngx-datatable-column name="ID"></ngx-datatable-column>
+						<ngx-datatable-column name="Date"></ngx-datatable-column> -->
+				  
+						<ngx-datatable-column name="Action">
+							<ng-template let-row="row" ngx-datatable-cell-template>
+								<button class=" btn btn-icon btn-default btn-sm" type="button" title="View" (click)="openModal(viewData)">
+									<span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+								</button>
+								<!-- <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+									<span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+								</button>
+								<button class=" btn btn-icon btn-default btn-sm" type="button" title="Print">
+									<span class=" btn-inner--icon"> <i class=" fas fa-print"> </i> </span>
+								</button> -->
+							</ng-template>
+						</ngx-datatable-column>
+					</ngx-datatable>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #viewData>
+    <div class="modal-header bg-default">
+        <h6 class="modal-title text-white my-auto" id="modal-title-default">
+            {{ "ViewQueue" | translate }}
+        </h6>
+
+        <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            <span aria-hidden="true" class="text-white my-auto"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+		<div class="card">
+			<div class="card-body">
+				<div class="col-xl-12">
+					<label class="form-control-label">Platform: </label>
+				</div>
+				<div class="col-xl-12">
+					<label class="form-control-label">{{ "Gate" | translate }}: </label>
+				</div>
+				<div class="col-xl-12">
+					<label class="form-control-label">{{ "FlightNo" | translate }}: </label>
+				</div>
+				<div class="col-xl-12">
+					<label class="form-control-label">{{ "Name" | translate }}: </label>
+				</div>
+				<div class="col-xl-12">
+					<label class="form-control-label">{{ "Date" | translate }}: </label>
+				</div>
+				
+
+
+			</div>
+		</div>
+        <!-- <form [formGroup]="registerForm">
+            <div class="form-group">
+                <label class="form-control-label">Name</label>
+                <input 
+                  class="form-control"
+                  placeholder="Enter name"
+                  formControlName="name"
+                  type="text"
+                >
+                <ng-container *ngFor="let message of registerFormMessages.name">
+                    <div *ngIf="registerForm.get('name').hasError(message.type) && (registerForm.get('name').dirty || registerForm.get('name').touched)">
+                        <p class="error-message"><span>{{ message.message }}</span></p>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">Email</label>
+                <input 
+                  class="form-control"
+                  placeholder="Enter email"
+                  formControlName="email"
+                  type="text"
+                >
+                <ng-container *ngFor="let message of registerFormMessages.email">
+                    <div *ngIf="registerForm.get('email').hasError(message.type) && (registerForm.get('email').dirty || registerForm.get('email').touched)">
+                        <p class="error-message"><span>{{ message.message }}</span></p>
+                    </div>
+                </ng-container>
+            </div>
+        </form> -->
+    </div>
+
+    <div class="modal-footer">
+        <!-- <button 
+            class="btn btn-success"
+            type="button"
+            (click)="confirm()"
+            [disabled]="!registerForm.valid"
+        >
+            Create
+        </button> -->
+
+        <button
+            class="btn btn-outline-danger ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+		{{ "Close" | translate }}
+        </button>
+    </div>
+</ng-template>
+
+<footer>
+	<livechat-widget
+	  #liveChatWidget
+	  licenseId="11082047"
+	  (onChatLoaded)="onChatLoaded($event)"
+	  (onChatWindowOpened)="onChatWindowOpened()"
+	  (onChatWindowMinimized)="onChatWindowMinimized()"
+	  [visitor]=""
+	  [params]=""
+	></livechat-widget>
+  </footer>
